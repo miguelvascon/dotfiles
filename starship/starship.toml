@@ -8,15 +8,16 @@ add_newline = false
 command_timeout = 1000
 
 [character]
-success_symbol = '[➜](bold green)'
-error_symbol = '[➜](bold red)'
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
 
 [directory]
 style = "bold cyan"
 truncation_length = 1
 
 [git_branch]
-format =  '[$symbol$branch(:$remote_branch)]($style)'
+format = "[$symbol$branch(:$remote_branch)]($style)"
+style = "bold lavender"
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
