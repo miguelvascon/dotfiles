@@ -1,4 +1,5 @@
 local wezterm = require 'wezterm'
+local mux = wezterm.mux
 local config = {}
 
 config.font_size = 12.0
@@ -13,5 +14,13 @@ config.window_padding = {
   top = 20,
   bottom = 20,
 }
+
+wezterm.on('gui-startup', function(window)
+  local tab, pane, window = mux.spawn_window(cmd or {})
+  local gui_window = window:gui_window();
+  gui_window:maximize()
+end)
+
+config.native_macos_fullscreen_mode = true
 
 return config
