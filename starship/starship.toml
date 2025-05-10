@@ -1,5 +1,5 @@
 # left
-format = """$directory$character"""
+format = """$directory$git_branch$git_status$character"""
 palette = "catppuccin_mocha"
 # right
 right_format = """$all"""
