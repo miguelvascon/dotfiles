@@ -15,13 +15,4 @@ config.window_padding = {
   bottom = 20,
 }
 
--- temporary fix for maxing window at startup until i get a wm
-wezterm.on('gui-startup', function(window)
-  local tab, pane, window = mux.spawn_window(cmd or {})
-  local gui_window = window:gui_window();
-  gui_window:maximize()
-end)
-config.native_macos_fullscreen_mode = true
--- temporary fix for maxing window at startup until i get a wm
-
 return config
