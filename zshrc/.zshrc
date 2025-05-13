@@ -12,11 +12,6 @@ fi
 # source/load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-# exports
-export LANG=en_US.UTF-8
-export EDITOR=/opt/homebrew/bin/nvim
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
-
 # plugins go here
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -68,7 +63,6 @@ alias ....='cd ../..'
 alias ......='cd ../../..'
 
 # shell integrations
-eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
