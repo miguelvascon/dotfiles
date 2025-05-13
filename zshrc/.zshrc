@@ -60,6 +60,12 @@ alias ls='ls --color'
 alias ll='ls -l'
 alias la='ls -la'
 alias vim='nvim'
+alias tree='tree -C'
+
+# directories
+alias ..='cd ..'
+alias ....='cd ../..'
+alias ......='cd ../../..'
 
 # shell integrations
 eval "$(/opt/homebrew/bin/brew shellenv)"
