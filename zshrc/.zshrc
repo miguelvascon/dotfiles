@@ -12,6 +12,9 @@ fi
 # source/load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
+# enable prompt substitution
+setopt promptsubst
+
 # plugins go here
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -19,7 +22,8 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
 # snippets go here
-zinit snippet OMZP::git
+zinit snippet OMZL::git.zsh
+zinit snippet OMZT::robbyrussell
 zinit snippet OMZP::sudo
 zinit snippet OMZP::command-not-found
 
@@ -63,6 +67,5 @@ alias ....='cd ../..'
 alias ......='cd ../../..'
 
 # shell integrations
-eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
